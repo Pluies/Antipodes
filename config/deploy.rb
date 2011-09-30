@@ -6,7 +6,7 @@ set :rvm_ruby_string, '1.9.2'
 set :rvm_type, :system
 
 set :application, "antipodes"
-set :repository,  "git@github.com:Pluies/Antipodes.git"
+set :repository,  "git://github.com/Pluies/Antipodes.git"
 
 require 'bundler/capistrano'
 set :bundle_gemfile,      "Gemfile"
@@ -16,7 +16,7 @@ set :bundle_without,      [:development, :test]
 
 set :scm, :git
 
-set :deploy_to, "/var/www/"
+set :deploy_to, "/antipodes/"
 
 set :user,"root"
 set :scm_username, "root"
