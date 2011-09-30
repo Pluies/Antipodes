@@ -1,0 +1,10 @@
+<br />
+<br />
+<br />
+<%= form_tag("/geocode", :method => "get") do %>
+  <%= label_tag :q, "Search for a place on Earth:" %>
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+<p>Example: <em><%= @random_example %></em></p>
+
