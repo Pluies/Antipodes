@@ -31,7 +31,7 @@ class AntipodesController < ApplicationController
     @json = '[{"lng":"'+lng.to_s+'", "lat":"'+lat.to_s+'"}]'
     reverse_geocoding_result = Geocoder.search(lat.to_s+","+lng.to_s)
     @reverse_address = if reverse_geocoding_result.empty?
-                         :address_not_found
+                         t :address_not_found
                        else
                          reverse_geocoding_result.first.address
                        end
