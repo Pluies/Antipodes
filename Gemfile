@@ -6,6 +6,9 @@ gem 'jquery-rails'
 
 group :test do
   gem 'turn', :require => false
+  gem 'rspec-rails'
+  gem 'spork'
+  gem 'autotest'
 end
 
 # Gems used only for assets and not required
