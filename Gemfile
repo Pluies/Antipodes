@@ -8,7 +8,11 @@ group :test do
   gem 'turn', :require => false
   gem 'rspec-rails'
   gem 'spork'
-  gem 'autotest'
+  gem 'spork-testunit'
+  gem 'test-unit'
+  gem 'autotest-standalone'
+  gem 'autotest-rails-pure'
+  gem 'autotest-inotify'
   gem 'ruby-debug19'
 end
 
