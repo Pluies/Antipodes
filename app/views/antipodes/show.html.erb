@@ -2,9 +2,9 @@
 <br />
 <br />
 <%= form_tag("/geocode", :method => "get") do %>
-  <%= label_tag :q, "Search for a place on Earth:" %>
+  <%= label_tag :q, t(:search) %>
   <%= text_field_tag :q, params[:q] %>
   <%= submit_tag "Search", :name => nil %>
 <% end %>
-<p>Example: <em><%= @random_example %></em></p>
+<p><%=t :example %> <em><%= @random_example %></em></p>
 

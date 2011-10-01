@@ -1,0 +1,19 @@
+fr:
+  # Main page
+  search: "Cherchez un endroit sur Terre :"
+  search_button: "Chercher"
+  example: "Exemple :"
+  cant_find_location: "Impossible de trouver cet endroit. Pourriez-vous être plus précis ?"
+
+  # Place confirmation
+  place_confirmation: "Cet endroit là ?"
+  yes_button: "Oui ! En avant, très cher, allons au bout du monde !"
+  no_button: "Non :("
+
+  # Antipodes display
+  other_side: "De l'autre côté :"
+  address: "Adresse :"
+  address_not_found: "Pas d'adresse trouvée."
+  link_to_start: "Génial ! Encore !"
+
+

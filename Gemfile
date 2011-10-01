@@ -9,6 +9,7 @@ group :test do
   gem 'rspec-rails'
   gem 'spork'
   gem 'autotest'
+  gem 'ruby-debug19'
 end
 
 # Gems used only for assets and not required
@@ -27,5 +28,5 @@ gem 'rvm'
 # Application specific
 gem 'gmaps4rails'
 gem 'geocoder'
-
+gem 'http_accept_language'
 

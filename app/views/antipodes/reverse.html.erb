@@ -1,5 +1,5 @@
-<h1>What's on the other side:</h1>
+<h1><%=t :other_side %></h1>
 <%= gmaps("markers" => {"data" => @json}, "map_options" => {"processing" => "json", "auto_adjust" => true, "auto_zoom" => false, "zoom" => 10}) %>
 <br />
-<p><strong>Address:</strong> <%= @reverse_address %></p>
-<p><%= link_to 'Awesome! Do it again!', '/' %></p>
+<p><strong><%=t :address %></strong> <%= @reverse_address %></p>
+<p><%= link_to t(:link_to_start), '/' %></p>

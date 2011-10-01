@@ -12,7 +12,7 @@ class AntipodesController < ApplicationController
   def address
     geocoding_result = Geocoder.search(params[:q]).first
     if geocoding_result.nil?
-      flash[:error] = "Looks like I can't find this place. Could you try to be more precise?"
+      flash[:error] = t(:cant_find_location)
       redirect_to '/'
     else
       @lat = geocoding_result.latitude
@@ -31,7 +31,7 @@ class AntipodesController < ApplicationController
     @json = '[{"lng":"'+lng.to_s+'", "lat":"'+lat.to_s+'"}]'
     reverse_geocoding_result = Geocoder.search(lat.to_s+","+lng.to_s)
     @reverse_address = if reverse_geocoding_result.empty?
-                         "No address found."
+                         :address_not_found
                        else
                          reverse_geocoding_result.first.address
                        end

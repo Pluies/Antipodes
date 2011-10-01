@@ -1,5 +1,18 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  # Main page
+  search: "Search for a place on Earth:"
+  search_button: "Search"
+  example: "Example:"
+  cant_find_location: "Looks like I can't find this place. Could you try to be more precise?"
+
+  # Place confirmation
+  place_confirmation: "Is this the place you meant?"
+  yes_button: "Yes! Onward, noble steed, to the other side of the world!"
+  no_button: "No :("
+
+  # Antipodes display
+  other_side: "What's on the other side:"
+  address: "Address:"
+  address_not_found: "No address found."
+  link_to_start: "Awesome! Do it again!"
+
