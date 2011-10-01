@@ -9,6 +9,7 @@
   <body style="background: #EEEEEE;">
     <%= yield :head %>
     <%= link_to image_tag('logo.png'), '/' %>
+    <%= render 'shared/notice_div' %>
     <%= yield %>
     <%= yield :scripts %>
   </body>

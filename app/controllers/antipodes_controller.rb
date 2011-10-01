@@ -1,4 +1,5 @@
 class AntipodesController < ApplicationController
+
   def show
     # Please enter an address yada yada.
     @random_example = ["Ushuaia",
@@ -7,12 +8,19 @@ class AntipodesController < ApplicationController
       "Wellington, New Zealand",
       "Madrid"].sample
   end
+
   def address
     geocoding_result = Geocoder.search(params[:q]).first
-    @lat = geocoding_result.latitude
-    @lng = geocoding_result.longitude
-    @json = '[{"lng":"'+@lng.to_s+'", "lat":"'+@lat.to_s+'"}]'
+    if geocoding_result.nil?
+      flash[:error] = "Looks like I can't find this place. Could you try to be more precise?"
+      redirect_to '/'
+    else
+      @lat = geocoding_result.latitude
+      @lng = geocoding_result.longitude
+      @json = '[{"lng":"'+@lng.to_s+'", "lat":"'+@lat.to_s+'"}]'
+    end
   end
+
   def reverse
     # Get the coordinates back from the form
     lat = params[:lat].to_f
@@ -28,6 +36,7 @@ class AntipodesController < ApplicationController
                          reverse_geocoding_result.first.address
                        end
   end
+
 end
 
 
