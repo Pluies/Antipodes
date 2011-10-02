@@ -11,6 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20111002143044) do
+
+  create_table "countries", :force => true do |t|
+    t.string   "name"
+    t.string   "center"
+    t.text     "polygons"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

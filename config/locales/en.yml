@@ -8,6 +8,7 @@ en:
   # Place confirmation
   place_confirmation: "Is this the place you meant?"
   yes_button: "Yes! Onward, noble steed, to the other side of the world!"
+  yes_country_button: "You promised me the antipodes !"
   no_button: "No :("
 
   # Antipodes display
