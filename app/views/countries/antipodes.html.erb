@@ -1,0 +1,10 @@
+<h1><%= @country.name %> — antipodes</h1>
+<%=
+  gmaps({
+    "polygons" => {"data" => @country.reversed_polygons,
+      "options" => {"fillColor" => "#ff0"}
+    }
+  })
+%>
+<p><%= link_to t(:link_to_start), '/' %></p>
+

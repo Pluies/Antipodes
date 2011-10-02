@@ -1,0 +1,14 @@
+<h1><%= @country.name %></h1>
+<%=
+  gmaps({
+    "polygons" => {"data" => @country.polygons,
+      "options" => {"fillColor" => "#ff0"}
+    }
+  })
+%>
+<br />
+<%= form_tag '/country/antipodes', :method => 'get' do %>
+  <%= hidden_field_tag(:id, @country.id) %>
+  <%= submit_tag( t(:yes_country_button), :name=>nil) %>
+<% end %>
+

@@ -1,0 +1,20 @@
+<br />
+<br />
+<br />
+<br />
+<br />
+<%= form_tag("/geocode", :method => "get") do %>
+  <%= label_tag :q, t(:search) %>
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+<p class="lighter"><%=t :example %> <em><%= @random_example %></em></p>
+<br />
+—
+<br />
+<br />
+<p>Or by country/state:
+<%= form_tag('/country', :method => "get") do %>
+  <%= select_tag 'id', options_from_collection_for_select(Country.all.sort{|a,b| a.name <=> b.name}, :id, :name) %>
+  <%= submit_tag "Go", :name => nil %>  
+<% end %> 
