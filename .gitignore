@@ -6,3 +6,4 @@ log/*.log
 tmp/
 bin/
 .sass-cache/
+/vendor
