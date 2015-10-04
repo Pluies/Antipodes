@@ -1,0 +1,16 @@
+<div class="mapContainer">
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
+<script>
+$(function(){
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {zoom: 15}, internal: {id: 'map'}}, function(){
+    var markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+    handler.getMap().setZoom(10);
+  });
+});
+</script>
+

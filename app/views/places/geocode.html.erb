@@ -1,5 +1,6 @@
-<%= gmaps("markers" => {"data" => @json}, "map_options" => {"processing" => "json", "auto_adjust" => true, "auto_zoom" => false, "zoom" => 10}) %>
 <h1><%=t :place_confirmation %></h1>
+
+<%= render "shared/map" %>
 
 <%= form_tag '/antipodes', :method => 'get' do %>
   <%= hidden_field_tag(:lat, @lat) %>

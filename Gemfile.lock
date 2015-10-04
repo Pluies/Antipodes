@@ -66,6 +66,8 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.3)
     libv8 (3.16.14.11)
+    lodash-rails (3.10.1)
+      railties (>= 3.1)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -172,6 +174,7 @@ DEPENDENCIES
   gmaps4rails
   http_accept_language
   jquery-rails
+  lodash-rails
   rails (= 3.2.22)
   rspec-rails
   rvm

@@ -5,3 +5,10 @@
  *= require_self
  *= require_tree . 
 */
+
+.mapContainer {
+  width: 800px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def guess_best_locale
-    @requested_locale = request.preferred_language_from(%w{en-US fr-FR})
+    @requested_locale = http_accept_language.preferred_language_from(%w{en-US fr-FR})
     if @requested_locale
       I18n.locale = @requested_locale.split('-').first
     end

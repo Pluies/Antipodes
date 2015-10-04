@@ -39,4 +39,5 @@ gem 'rvm'
 gem 'gmaps4rails'
 gem 'geocoder'
 gem 'http_accept_language'
+gem 'lodash-rails'
 

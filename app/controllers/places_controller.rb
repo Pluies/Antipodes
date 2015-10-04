@@ -17,7 +17,10 @@ class PlacesController < ApplicationController
     else
       @lat = geocoding_result.latitude
       @lng = geocoding_result.longitude
-      @json = '[{"lng":"'+@lng.to_s+'", "lat":"'+@lat.to_s+'"}]'
+      @hash = Gmaps4rails.build_markers([""]) do |_,marker|
+        marker.lat @lat
+        marker.lng @lng
+      end
     end
   end
 
@@ -28,7 +31,10 @@ class PlacesController < ApplicationController
     # Compute the antipodes
     lng = if lng<0 then lng+180 else lng-180 end
     lat = -lat
-    @json = '[{"lng":"'+lng.to_s+'", "lat":"'+lat.to_s+'"}]'
+    @hash = Gmaps4rails.build_markers([""]) do |_,marker|
+      marker.lat lat
+      marker.lng lng
+    end
     reverse_geocoding_result = Geocoder.search(lat.to_s+","+lng.to_s)
     @reverse_address = if reverse_geocoding_result.empty?
                          t :address_not_found
