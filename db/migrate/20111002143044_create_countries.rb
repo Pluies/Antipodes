@@ -4,8 +4,6 @@ class CreateCountries < ActiveRecord::Migration
       t.string :name
       t.string :center
       t.text :polygons
-
-      t.timestamps
     end
   end
 end
