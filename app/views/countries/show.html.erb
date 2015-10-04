@@ -1,11 +1,6 @@
 <h1><%= @country.name %></h1>
-<%=
-  gmaps({
-    "polygons" => {"data" => @country.polygons,
-      "options" => {"fillColor" => "#ff0"}
-    }
-  })
-%>
+
+<%= render "shared/map" %>
 <br />
 <%= form_tag '/country/antipodes', :method => 'get' do %>
   <%= hidden_field_tag(:id, @country.id) %>

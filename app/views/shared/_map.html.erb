@@ -6,10 +6,18 @@
 $(function(){
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: {zoom: 15}, internal: {id: 'map'}}, function(){
-    var markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    <% if @gmaps_markers %>
+    var markers = handler.addMarkers(<%=raw @gmaps_markers.to_json %>);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
     handler.getMap().setZoom(10);
+    <% elsif @gmaps_polygon %>
+    var polygons = handler.addPolygons(
+      <%=raw @gmaps_polygon %>
+    ,{ strokeColor: '#FF0000'});
+    handler.bounds.extendWith(polygons);
+    handler.fitMapToBounds();
+    <% end %>
   });
 });
 </script>

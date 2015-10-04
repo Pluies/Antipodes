@@ -17,7 +17,7 @@ class PlacesController < ApplicationController
     else
       @lat = geocoding_result.latitude
       @lng = geocoding_result.longitude
-      @hash = Gmaps4rails.build_markers([""]) do |_,marker|
+      @gmaps_markers = Gmaps4rails.build_markers([""]) do |_,marker|
         marker.lat @lat
         marker.lng @lng
       end
@@ -31,7 +31,7 @@ class PlacesController < ApplicationController
     # Compute the antipodes
     lng = if lng<0 then lng+180 else lng-180 end
     lat = -lat
-    @hash = Gmaps4rails.build_markers([""]) do |_,marker|
+    @gmaps_markers = Gmaps4rails.build_markers([""]) do |_,marker|
       marker.lat lat
       marker.lng lng
     end
