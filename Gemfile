@@ -19,7 +19,7 @@ group :test do
   gem 'autotest-standalone'
   gem 'autotest-rails-pure'
   gem 'autotest-inotify'
-  gem 'ruby-debug19'
+#  gem 'ruby-debug19'
 end
 
 # Gems used only for assets and not required
