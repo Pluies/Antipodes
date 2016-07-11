@@ -9,11 +9,11 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111002143044) do
+ActiveRecord::Schema.define(version: 20111002143044) do
 
-  create_table "countries", :force => true do |t|
+  create_table "countries", force: :cascade do |t|
     t.string "name"
     t.string "center"
     t.text   "polygons"

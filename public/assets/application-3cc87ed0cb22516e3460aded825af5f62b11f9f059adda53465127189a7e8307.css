@@ -1,0 +1,106 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+
+
+*/
+
+
+.mapContainer {
+  width: 800px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 5, /Users/florent/Dropbox/Projects/Antipodes/app/assets/stylesheets/flash.css.scss */
+.flash_notice {
+  background-color: #A4E7A0;
+  border: 1px solid #26722D;
+  display: none;
+}
+
+/* line 6, /Users/florent/Dropbox/Projects/Antipodes/app/assets/stylesheets/flash.css.scss */
+.flash_error {
+  background-color: #F0A8A8;
+  border: 1px solid #900;
+  display: none;
+}
+
+/* line 7, /Users/florent/Dropbox/Projects/Antipodes/app/assets/stylesheets/flash.css.scss */
+.flash_notice, .flash_error {
+  width: 90%;
+  margin: 0 auto 10px auto;
+  padding: 5px;
+}
+
+/* line 8, /Users/florent/Dropbox/Projects/Antipodes/app/assets/stylesheets/flash.css.scss */
+.flash_notice p, .flash_error p {
+  margin-left: 20px;
+  padding: 0;
+  font-size: .75em;
+  color: #000;
+}
+
+/* line 9, /Users/florent/Dropbox/Projects/Antipodes/app/assets/stylesheets/flash.css.scss */
+.flash_notice a, .flash_error a {
+  text-decoration: none;
+  padding: 0 3px;
+}
+
+/* line 10, /Users/florent/Dropbox/Projects/Antipodes/app/assets/stylesheets/flash.css.scss */
+.flash_notice a {
+  border: 1px solid #26722D;
+  color: #26722D;
+}
+
+/* line 11, /Users/florent/Dropbox/Projects/Antipodes/app/assets/stylesheets/flash.css.scss */
+.flash_error a {
+  border: 1px solid #900;
+  color: #900;
+}
+
+/* line 12, /Users/florent/Dropbox/Projects/Antipodes/app/assets/stylesheets/flash.css.scss */
+.flash_notice a:hover, .flash_error a:hover {
+  color: #333;
+  border: 1px solid #333;
+}
+.map_container {
+  padding: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #ccc #999 #ccc;
+  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+  width: 800px;
+}
+
+.gmaps4rails_map {
+  width: 800px;
+  height: 400px;
+}
+
+.bing_map {
+   position: absolute;
+   top: 20;
+   left: 10;
+   width: 400px;
+   height: 400px;
+   border:#555555 2px solid;
+}
+/* line 1, /Users/florent/Dropbox/Projects/Antipodes/app/assets/stylesheets/places.css.scss */
+body {
+  text-align: center;
+}
+
+/* line 5, /Users/florent/Dropbox/Projects/Antipodes/app/assets/stylesheets/places.css.scss */
+h1 {
+  font-size: 140%;
+}
+
+/* line 9, /Users/florent/Dropbox/Projects/Antipodes/app/assets/stylesheets/places.css.scss */
+.map_container {
+  margin-left: auto;
+  margin-right: auto;
+}
