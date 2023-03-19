@@ -4,7 +4,6 @@ gem 'rails', '~> 5.1'
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
-gem 'therubyracer' # To interpret coffeescript
 
 gem 'sqlite3'
 gem 'jquery-rails'
