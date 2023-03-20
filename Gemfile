@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 7'
+gem 'puma' # To have a server as none is included by default since Rails 6
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
@@ -17,12 +18,7 @@ group :test do
   gem 'autotest-standalone'
   gem 'autotest-rails-pure'
   gem 'autotest-inotify'
-#  gem 'ruby-debug19'
 end
-
-# Deploy with Capistrano
-gem 'capistrano'
-gem 'rvm'
 
 # Application specific
 gem 'gmaps4rails'

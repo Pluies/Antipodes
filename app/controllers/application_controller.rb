@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :guess_best_locale
+  before_action :guess_best_locale
 
   protected
 
