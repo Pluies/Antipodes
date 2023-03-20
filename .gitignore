@@ -7,3 +7,5 @@ tmp/
 bin/
 .sass-cache/
 /vendor
+
+/config/master.key
