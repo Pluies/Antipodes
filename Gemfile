@@ -5,6 +5,7 @@ gem 'puma' # To have a server as none is included by default since Rails 6
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
+gem 'mini_racer' # To generate assets without requiring an external js runtime
 
 gem 'sqlite3'
 gem 'jquery-rails'
