@@ -7,7 +7,7 @@ gem 'coffee-rails'
 gem 'uglifier'
 gem 'mini_racer' # To generate assets without requiring an external js runtime
 
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.7.0'
 gem 'jquery-rails'
 
 group :test do
